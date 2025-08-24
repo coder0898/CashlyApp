@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+html,body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.tab-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #0070FF;
+    margin-bottom: 20px;
+    transition: all .4s ease-in-out;
+}
+
+.tab{
+    width: 150px;
+    font-size: 1.2rem;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    background-color: #0070FF;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab:hover{
+    background-color: #fff;
+    color: #0070FF;
+    border: 2px solid #0070FF;
+}
+
+.tab.active{
+    background-color: #fff;
+    color: #0070FF;
+    border: 2px solid #0070FF;
+}
+
+.tab-container{
+    padding: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.content{
+   display: none;
+}
+
+.content.active{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 10px;
+}
+
+.form-group label{
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form-group input{
+    margin-bottom: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.form-group input:focus{
+    border-color: #0070FF;
+}
+
+.button-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.content button{
+    width: 150px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+#submitLogin{
+    background-color: #0070FF;
+    color: #fff;
+}
+
+#submitLogin:hover{
+    background-color: #fff;
+    color: #0070FF;
+    border: 2px solid #0070FF;
+}
+
+#submitRegister{
+    background-color: #39FF14;
+    color: #fff;
+}
+
+#submitRegister:hover{
+    background-color: #138808;
+}
+
+#resetForm{
+    background-color: #FDEE00;
+    color: #fff;
+}
+
+#resetForm:hover{
+    background-color: #FFD700;
+}
