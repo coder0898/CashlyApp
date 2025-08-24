@@ -140,3 +140,11 @@ html,body{
 #resetForm:hover{
     background-color: #FFD700;
 }
+
+.form-group span{
+    font-size: 1.1rem;
+}
+
+#errorEmail{
+    display: none;
+}
