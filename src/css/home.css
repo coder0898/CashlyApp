@@ -1,168 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
-
 
 body {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
+/* ========== Header ========== */
 header {
-    background-color: #0070FF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    height: 80px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #0070FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .logo {
-    margin-left: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo span {
-    font-size: 2rem;
-    color: #fff;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .logo h1 {
-    font-size: 2.3rem;
-    margin-left: 10px;
-    color: #fff;
+  font-size: 2.3rem;
+  margin-left: 10px;
+  color: #fff;
 }
 
 header button {
-    margin-right: 20px;
-    width: 150px;
-    padding: 10px;
-    font-size: 1.3rem;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    color: #0070FF;
-    font-weight: 600;
-    background-color: #fff;
-    border-radius: .5rem;
+  width: 150px;
+  padding: 10px;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  color: #0070FF;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: .5rem;
 }
 
-button span {
-    margin-right: 10px;
+header button span {
+  margin-right: 10px;
 }
 
-/* main */
+/* ========== Main Layout ========== */
 main {
-    display: flex;
-    height: calc(100vh - 80px);
+  display: flex;
+  height: calc(100vh - 80px);
 }
 
-
+/* ========== Sidebar Tabs ========== */
 .tab-buttons {
-    width: 280px;
-    background-color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all .4s ease-in-out;
+  width: 280px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
 }
 
 .tab {
-    width: 100%;
-    font-size: 1.2rem;
-    padding: 10px;
-    outline: 0;
-    border: 0;
-    background-color: #0070FF;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #0070FF;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.tab:hover {
-    background-color: #fff;
-    color: #0070FF;
-}
-
+.tab:hover,
 .tab.active {
-    background-color: #fff;
-    color: #0070FF;
+  background-color: #fff;
+  color: #0070FF;
 }
 
+/* ========== Content ========== */
 .container {
-    width: 100%;
-    padding: 20px;
-    transition: all .4s ease-in-out;
+  flex: 1;
+  padding: 20px;
+  transition: all 0.4s ease-in-out;
 }
 
 .content {
-    display: none;
-    width: 100%;
+  display: none;
+  flex-direction: column;
 }
 
 .content.active {
-    display: flex;
-    flex-direction: column;
+  display: flex;
 }
 
 .content h2 {
-    width: 100%;
-    font-size: 2.5rem;
-    border-bottom: 4px solid #0070FF;
-    margin-bottom: 20px;
-}
-
-
-
-/* tans form */
-.form-container{
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: .5rem;
+  font-size: 2.5rem;
+  border-bottom: 4px solid #0070FF;
   margin-bottom: 20px;
 }
 
-.form-container h3{
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    color: #0070FF;
+/* ========== Forms ========== */
+.form-container,.list-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: .5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-/* Table Container */
-.trans-container {
+.form-container h3,.list-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #0070FF;
+}
+
+/* ========== Table ========== */
+.trans-container,
+.list-content {
   width: 100%;
-  margin: 0 auto;
   border-collapse: collapse;
-  overflow: hidden;
   border: 1px solid #ccc;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-/* Table Head */
-.trans-container thead th {
+.trans-container thead th,
+.list-content thead th {
   background-color: #1e88e5;
   color: white;
-  text-align: left;
   padding: 16px;
   font-weight: 600;
   font-size: 16px;
+  text-align: left;
 }
 
-/* Table Body Cells */
-.trans-container tbody td {
+.trans-container tbody td,
+.list-content tbody td {
   padding: 14px 16px;
   border-top: 1px solid #e0e0e0;
 }
 
-/* Input Fields */
+/* Inputs */
 .trans-container input[type="text"],
 .trans-container input[type="number"],
 .trans-container select {
@@ -171,9 +160,9 @@ main {
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: #fafafa;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   font-size: 14px;
   outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .trans-container input:focus,
@@ -182,21 +171,24 @@ main {
   box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
 }
 
-/* Buttons */
+/* ========== Buttons ========== */
 .button-group {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .button-group button {
   padding: 10px 16px;
-  border: none;
+  border: 0;
+  outline:0;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.2s ease;
 }
 
+/* Submit */
 #tansSubmit {
   background-color: #43a047;
   color: white;
@@ -207,6 +199,7 @@ main {
   box-shadow: 0 4px 12px rgba(67, 160, 71, 0.2);
 }
 
+/* Reset */
 #resetTrans {
   background-color: #fcd810;
   color: white;
@@ -217,13 +210,76 @@ main {
   box-shadow: 0 4px 12px rgba(239, 83, 80, 0.2);
 }
 
-/* Responsive (Optional) */
+/* view */
+#viewDetail {
+  background-color: #0070FF;
+  color: white;
+  border: 0;
+  outline:0;
+  padding: 5px;
+  border-radius: .5rem;
+}
+
+#viewDetail:hover {
+  background-color: #1e88e5;
+  box-shadow: 0 4px 12px rgba(30, 136, 229,0.3);
+}
+
+#deleteTrans {
+  background-color: #E23D28;
+  color: white;
+    border: 0;
+  outline:0;
+  padding: 5px;
+  border-radius: .5rem;
+}
+
+#deleteTrans:hover {
+  background-color: #FF3800;
+  box-shadow: 0 4px 12px rgba(255, 56, 0,0.3);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1024px) {
+  .tab-buttons {
+    width: 200px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header button {
+    width: 120px;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .tab-buttons {
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
   .trans-container thead {
     display: none;
   }
 
-  .trans-container tbody,
   .trans-container tr,
   .trans-container td {
     display: block;
@@ -248,3 +304,23 @@ main {
   }
 }
 
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  header button {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+  }
+}
