@@ -1,4 +1,3 @@
-import "../style.css";
 import { initTabs } from "./tab.js";
 import { initRegister } from "./register.js";
 import { initLogin } from "./authIn.js";

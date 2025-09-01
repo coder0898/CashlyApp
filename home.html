@@ -4,10 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cashly App: Home</title>
+    <link rel="stylesheet" href="./src/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h1>Welcome to Home</h1>
-    <button id="logOutButton">LogOut</button>
+    <header>
+      <div class="logo">
+        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        <h1>Cashly App</h1>
+      </div>
+      <button id="logOutButton">
+        <span><i class="fa-solid fa-backward"></i></span>LogOut
+      </button>
+    </header>
+
+    <main>
+      <aside class="tab-buttons">
+        <button class="tab" data-tab="1">
+          <span><i class="fa-solid fa-table-columns"></i></span> Dashboard
+        </button>
+        <button class="tab active" data-tab="2">
+          <span><i class="fa-solid fa-indian-rupee-sign"></i></span>Transaction
+        </button>
+      </aside>
+
+      <section class="container">
+        <div class="content active" data-tab="1">done</div>
+
+        <div class="content" data-tab="2">
+          <h2>
+            <span><i class="fa-solid fa-wallet"></i></span> Transactions
+          </h2>
+          <div class="trans-container">
+            <div class="form-content">
+              <form>
+                <h3>Transaction Form</h3>
+                <div class="form-group">
+                  <label for="inputTansTittle">Title</label>
+                  <input type="text" id="inputTansTittle" placeholder="title" />
+                </div>
+                <div class="form-group">
+                  <label for="inputTansDesc">Description</label>
+                  <input
+                    type="text"
+                    id="inputTansDesc"
+                    placeholder="description"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputTansType">Type</label>
+                  <select id="inputTansType">
+                    <option value="">Select</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="inputAmount">Amount</label>
+                  <input type="number" id="inputAmount" placeholder="amount" />
+                </div>
+              </form>
+              <div class="button-group">
+                <button id="tansSubmit">Submit</button>
+                <button id="resetTrans">Reset</button>
+              </div>
+            </div>
+            <div class="list-container">
+              <h3>Transaction List</h3>
+              <div class="list-content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
