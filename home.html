@@ -41,44 +41,75 @@
           <h2>
             <span><i class="fa-solid fa-wallet"></i></span> Transactions
           </h2>
-          <div class="trans-container">
-            <div class="form-content">
-              <form>
-                <h3>Transaction Form</h3>
-                <div class="form-group">
-                  <label for="inputTansTittle">Title</label>
-                  <input type="text" id="inputTansTittle" placeholder="title" />
-                </div>
-                <div class="form-group">
-                  <label for="inputTansDesc">Description</label>
-                  <input
-                    type="text"
-                    id="inputTansDesc"
-                    placeholder="description"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="inputTansType">Type</label>
-                  <select id="inputTansType">
-                    <option value="">Select</option>
-                    <option value="income">Income</option>
-                    <option value="expense">Expense</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="inputAmount">Amount</label>
-                  <input type="number" id="inputAmount" placeholder="amount" />
-                </div>
-              </form>
-              <div class="button-group">
-                <button id="tansSubmit">Submit</button>
-                <button id="resetTrans">Reset</button>
-              </div>
-            </div>
-            <div class="list-container">
-              <h3>Transaction List</h3>
-              <div class="list-content"></div>
-            </div>
+          <div class="form-container">
+            <h3>Transaction Form</h3>
+            <table class="trans-container">
+              <thead>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Action</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="inputTansTittle"
+                      placeholder="title"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="inputTansDesc"
+                      placeholder="description"
+                    />
+                  </td>
+
+                  <td>
+                    <select id="inputCategory">
+                      <option value="">Select category</option>
+                      <option value="ration">Ration</option>
+                      <option value="stationery">Stationary</option>
+                      <option value="utilities">Utilities</option>
+                      <option value="transportation">Transportation</option>
+                      <option value="other">Others</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="inputTansType">
+                      <option value="">Select type</option>
+                      <option value="income">Income</option>
+                      <option value="expense">Expense</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      id="inputAmount"
+                      placeholder="amount"
+                    />
+                  </td>
+                  <td>
+                    <div class="button-group">
+                      <button id="tansSubmit">Submit</button>
+                      <button id="resetTrans">Reset</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="list-container">
+            <h3>Transaction List</h3>
+            <table class="list-content">
+              <thead>
+                <th></th>
+              </thead>
+            </table>
           </div>
         </div>
       </section>
