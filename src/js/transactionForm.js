@@ -1,3 +1,5 @@
+import { updateDashboardSummary } from "./dashboard";
+
 export function initTransactionForm() {
   // DOM Element
 
@@ -63,6 +65,7 @@ export function initTransactionForm() {
     transactionList.push(transDetails);
     localStorage.setItem("transactions", JSON.stringify(transactionList));
     ResetInputForm();
+    DisplayList();
   }
 
   function DisplayList() {
@@ -126,7 +129,7 @@ export function initTransactionForm() {
       actionTag.setAttribute("data-label", "Actions");
 
       const buttonGroup = document.createElement("div");
-      buttonGroup.classList.add = "button-group";
+      buttonGroup.classList.add("button-group");
 
       const viewBtn = document.createElement("button");
       viewBtn.id = "viewDetail";
@@ -137,6 +140,15 @@ export function initTransactionForm() {
       deleteBtn.id = "deleteTrans";
       deleteBtn.setAttribute("data-id", id);
       deleteBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+
+      deleteBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = Number(deleteBtn.dataset.id);
+        transactionList = transactionList.filter((data) => data.id !== id);
+        localStorage.setItem("transactions", JSON.stringify(transactionList));
+        DisplayList();
+        updateDashboardSummary();
+      });
 
       // Style buttons if needed
       viewBtn.style.marginRight = "8px";
@@ -162,6 +174,7 @@ export function initTransactionForm() {
   tansSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     TransationSubmit();
+    updateDashboardSummary();
   });
 
   resetTrans.addEventListener("click", (e) => {
